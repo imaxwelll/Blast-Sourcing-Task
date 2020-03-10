@@ -20,10 +20,6 @@ html {
     font-family: Gilroy;
 }
 
-.absolute {
-    position: absolute;
-}
-
 .container {
     min-width: 846px;
     max-width: 1146px;
@@ -32,7 +28,8 @@ html {
 }
 
 .wrapper {
-    width: 1366px;
+    min-width: 1366px;
+    width: 100%;
     overflow-x: hidden;
     margin: 0 auto;
 
@@ -41,19 +38,6 @@ html {
         min-height: 616px;
         height: 100%;
         margin-bottom: 62px;
-
-        &:before {
-            content: "";
-            position: absolute;
-            width: 100%;
-            height: 616px;
-            top: -10px;
-            display: block;
-            background-size: cover;
-            background-image: url(../img/back.png);
-            background-repeat: no-repeat;
-            z-index: -3;
-        }
     }
 
     .nav-header-wrapper {
@@ -61,6 +45,20 @@ html {
         align-items: center;
         justify-content: flex-start;
         position: relative;
+
+        &:before {
+            content: "";
+            position: absolute;
+            width: 640px;
+            height: 494px;
+            top: 90px;
+            left: 602px;
+            display: block;
+            background-size: cover;
+            background-image: url(../img/girl-with-lines.png);
+            background-repeat: no-repeat;
+            z-index: 1;
+        }
 
         .logo {
             padding-left: 48px;
@@ -313,8 +311,8 @@ html {
             &:before {
                 content: '';
                 position: absolute;
-                top: 6px;
-                left: -119px;
+                top: 13px;
+                left: 0;
                 width: 515px;
                 height: 625px;
                 background-image: url(../img/circle-phone.svg);
@@ -324,8 +322,8 @@ html {
             &:after {
                 content: '';
                 position: absolute;
-                top: 60px;
-                left: -119px;
+                top: 67px;
+                left: 0;
                 width: 639px;
                 height: 602px;
                 background-image: url(../img/phone.png);
